@@ -1,0 +1,443 @@
+Loading kernel...
++++ file_lookup, name: kernel
++++ file_lookup, path: /boot/kernel
++++ file_lookup, result: /boot/kernel/kernel.ko
++++ file_lookup, result: /boot/kernel/kernel
+/boot/kernel/kernel text=0x687aec data=0x8c128+0x2233d8 syms=[0x4+0x80cc0+0x4+0xd361d]
+Loading configured modules...
+can't find '/boot/entropy'
+fdt_setup_fdtp(): fdt_setup_fdtp()
+fdt_load_dtb_addr(): fdt_load_dtb_addr(0x88000000)
+fdt_load_dtb_addr(): fdt_load_dtb_addr(0x88000000)
+fdt_load_dtb_file(): fdt_load_dtb_file(am335x-boneblack.dtb)
++++ file_search path: /boot/kernel, name: am335x-boneblack.dtb
++++ file_lookup, name: am335x-boneblack.dtb
++++ file_lookup, path: /boot/kernel
++++ file_lookup, result: /boot/kernel/am335x-boneblack.dtb
++++ file_search path: /boot/modules, name: am335x-boneblack.dtb
++++ file_lookup, name: am335x-boneblack.dtb
++++ file_lookup, path: /boot/modules
++++ file_lookup, result: /boot/modules/am335x-boneblack.dtb
++++ file_search path: /boot/dtb, name: am335x-boneblack.dtb
++++ file_lookup, name: am335x-boneblack.dtb
++++ file_lookup, path: /boot/dtb
++++ file_lookup, result: /boot/dtb/am335x-boneblack.dtb
+/boot/dtb/am335x-boneblack.dtb size=0xcd4b
+fdt_load_dtb(): fdt_load_dtb(0x82e8d000)
+fdt_load_dtb(): DTB blob found at 0x82e8d000, size: 0xcd4b
+Loaded DTB from file 'am335x-boneblack.dtb'.
+fdt_copy(): fdt_copy va 0x82e9b000
+fdt_fixup(): fdt_fixup()
+Kernel entry at 0x82400180...
+Kernel args: (null)
+---<<BOOT>>---
+ARM Debug Architecture not supported
+KDB: debugger backends: ddb
+KDB: current backend: ddb
+Copyright (c) 1992-2019 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+        The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-CURRENT #11 r324678+afb9da498a1(trueos-master)-dirty: Mon Feb 18 16:07:38 EST 2019
+    root@trident-i7:/usr/home/oleh/work/embedded/obj.cortex-a8/usr/home/oleh/work/trueos-18.12/arm.armv7/sys/BEAGLEBONE arm
+FreeBSD clang version 7.0.1 (branches/release_70 348686) (based on LLVM 7.0.1)
+WARNING: WITNESS option enabled, expect reduced performance.
+VT: init without driver.
+Preloaded elf kernel "/boot/kernel/kernel" at 0xc0aa8000.
+Preloaded dtb "/boot/dtb/am335x-boneblack.dtb" at 0xc0ab0854.
+CPU: ARM Cortex-A8 r3p2 (ECO: 0x00000000)
+CPU Features: 
+  Thumb2, Security, VMSAv7
+Optional instructions: 
+  UMULL, SMULL, SIMD(ext)
+LoUU:2 LoC:3 LoUIS:1 
+Cache level 1:
+ 32KB/64B 4-way data cache WT WB Read-Alloc
+ 32KB/64B 4-way instruction cache Read-Alloc
+Cache level 2:
+ 256KB/64B 8-way unified cache WT WB Read-Alloc Write-Alloc
+real memory  = 536870912 (512 MB)
+avail memory = 510009344 (486 MB)
+Physical memory chunk(s):
+  0x80000000 - 0x9fffffff,   512 MB ( 131072 pages)
+Excluded memory regions:
+  0x82400000 - 0x82f44fff,    11 MB (   2885 pages) NoAlloc 
+Static device mappings:
+  0x44c00000 - 0x44ffffff mapped at VA 0xffb00000
+  0x47400000 - 0x474fffff mapped at VA 0xffa00000
+  0x47800000 - 0x478fffff mapped at VA 0xff900000
+  0x48000000 - 0x48ffffff mapped at VA 0xfe900000
+  0x49000000 - 0x490fffff mapped at VA 0xfe800000
+  0x49800000 - 0x49afffff mapped at VA 0xfe500000
+  0x4a000000 - 0x4affffff mapped at VA 0xfd500000
+Texas Instruments AM3358 Processor, Revision ES2.0
+arc4random: no preloaded entropy cache
+VIMAGE (virtualized network stack) enabled
+random: entropy device external interface
+mem: <memory>
+null: <full device, null device, zero device>
+openfirm: <Open Firmware control device>
+nfslock: pseudo-device
+crypto: <crypto core>
+kbd0 at kbdmux0
+ofwbus0: <Open Firmware Device Tree>
+simplebus0: <Flattened device tree simple bus> on ofwbus0
+simplebus1: <Flattened device tree simple bus> on simplebus0
+am335x_prcm0: <AM335x Power and Clock Management> mem 0x200000-0x203fff on simplebus1
+simplebus2: <Flattened device tree simple bus> mem 0x210000-0x211fff on simplebus1
+ti_scm0: <TI Control Module> mem 0-0x7ff on simplebus2
+ti_aintc0: <TI AINTC Interrupt Controller> mem 0x48200000-0x48200fff on simplebus0
+ti_aintc0: Revision 5.0
+cpulist0: <Open Firmware CPU Group> on ofwbus0
+cpu0: <Open Firmware CPU> on cpulist0
+cpu0: missing 'clock-frequency' property
+ofwbus0: <opp-table> compat operating-points-v2-ti-cpu (no driver attached)
+pmu0: <Performance Monitoring Unit> mem 0x4b000000-0x4bffffff irq 0 on ofwbus0
+ofwbus0: <soc> compat ti,omap-infra (no driver attached)
+simplebus1: <wkup_m3@100000> mem 0x100000-0x103fff,0x180000-0x181fff compat ti,am3352-wkup-m3 (no driver attached)
+am335x_prcm0: Clocks: System 24.0 MHz, CPU 1000 MHz
+ti_pinmux0: <TI Pinmux Module> mem 0x800-0xa37 on simplebus2
+Processing 1 pin-config node(s) in pinctrl-0 for pinmux@800
+pinmux_clkout2_pin: muxreg 0x01b4 muxval 0x03
+Processing 1 pin-config node(s) in pinctrl-0 for serial@44e09000
+pinmux_uart0_pins: muxreg 0x0170 muxval 0x30
+pinmux_uart0_pins: muxreg 0x0174 muxval 0x00
+Processing 1 pin-config node(s) in pinctrl-0 for tda19988
+nxp_hdmi_bonelt_pins: muxreg 0x01b0 muxval 0x03
+nxp_hdmi_bonelt_pins: muxreg 0x00a0 muxval 0x08
+nxp_hdmi_bonelt_pins: muxreg 0x00a4 muxval 0x08
+nxp_hdmi_bonelt_pins: muxreg 0x00a8 muxval 0x08
+nxp_hdmi_bonelt_pins: muxreg 0x00ac muxval 0x08
+nxp_hdmi_bonelt_pins: muxreg 0x00b0 muxval 0x08
+nxp_hdmi_bonelt_pins: muxreg 0x00b4 muxval 0x08
+nxp_hdmi_bonelt_pins: muxreg 0x00b8 muxval 0x08
+nxp_hdmi_bonelt_pins: muxreg 0x00bc muxval 0x08
+nxp_hdmi_bonelt_pins: muxreg 0x00c0 muxval 0x08
+nxp_hdmi_bonelt_pins: muxreg 0x00c4 muxval 0x08
+nxp_hdmi_bonelt_pins: muxreg 0x00c8 muxval 0x08
+nxp_hdmi_bonelt_pins: muxreg 0x00cc muxval 0x08
+nxp_hdmi_bonelt_pins: muxreg 0x00d0 muxval 0x08
+nxp_hdmi_bonelt_pins: muxreg 0x00d4 muxval 0x08
+nxp_hdmi_bonelt_pins: muxreg 0x00d8 muxval 0x08
+nxp_hdmi_bonelt_pins: muxreg 0x00dc muxval 0x08
+nxp_hdmi_bonelt_pins: muxreg 0x00e0 muxval 0x00
+nxp_hdmi_bonelt_pins: muxreg 0x00e4 muxval 0x00
+nxp_hdmi_bonelt_pins: muxreg 0x00e8 muxval 0x00
+nxp_hdmi_bonelt_pins: muxreg 0x00ec muxval 0x00
+Processing 1 pin-config node(s) in pinctrl-0 for i2c@44e0b000
+pinmux_i2c0_pins: muxreg 0x0188 muxval 0x30
+pinmux_i2c0_pins: muxreg 0x018c muxval 0x30
+Processing 1 pin-config node(s) in pinctrl-0 for i2c@4819c000
+pinmux_i2c2_pins: muxreg 0x0178 muxval 0x33
+pinmux_i2c2_pins: muxreg 0x017c muxval 0x33
+Processing 1 pin-config node(s) in pinctrl-0 for mmc@48060000
+pinmux_mmc1_pins: muxreg 0x0160 muxval 0x2f
+pinmux_mmc1_pins: muxreg 0x00fc muxval 0x30
+pinmux_mmc1_pins: muxreg 0x00f8 muxval 0x30
+pinmux_mmc1_pins: muxreg 0x00f4 muxval 0x30
+pinmux_mmc1_pins: muxreg 0x00f0 muxval 0x30
+pinmux_mmc1_pins: muxreg 0x0104 muxval 0x30
+pinmux_mmc1_pins: muxreg 0x0100 muxval 0x30
+Processing 1 pin-config node(s) in pinctrl-0 for spi@481a0000
+pinmux_spi1_pins: muxreg 0x0190 muxval 0x0b
+pinmux_spi1_pins: muxreg 0x0194 muxval 0x0b
+pinmux_spi1_pins: muxreg 0x0198 muxval 0x33
+pinmux_spi1_pins: muxreg 0x019c muxval 0x0b
+Processing 1 pin-config node(s) in pinctrl-0 for mdio@4a101000
+davinci_mdio_default: muxreg 0x0148 muxval 0x30
+davinci_mdio_default: muxreg 0x014c muxval 0x10
+Processing 1 pin-config node(s) in pinctrl-0 for ethernet@4a100000
+    cpsw_default: muxreg 0x0110 muxval 0x30
+    cpsw_default: muxreg 0x0114 muxval 0x00
+    cpsw_default: muxreg 0x0118 muxval 0x30
+    cpsw_default: muxreg 0x011c muxval 0x00
+    cpsw_default: muxreg 0x0120 muxval 0x00
+    cpsw_default: muxreg 0x0124 muxval 0x00
+    cpsw_default: muxreg 0x0128 muxval 0x00
+    cpsw_default: muxreg 0x012c muxval 0x30
+    cpsw_default: muxreg 0x0130 muxval 0x30
+    cpsw_default: muxreg 0x0134 muxval 0x30
+    cpsw_default: muxreg 0x0138 muxval 0x30
+    cpsw_default: muxreg 0x013c muxval 0x30
+    cpsw_default: muxreg 0x0140 muxval 0x30
+Processing 1 pin-config node(s) in pinctrl-0 for gpmc@50000000
+       gpmc_pins: muxreg 0x0000 muxval 0x30
+       gpmc_pins: muxreg 0x0004 muxval 0x30
+       gpmc_pins: muxreg 0x0008 muxval 0x30
+       gpmc_pins: muxreg 0x000c muxval 0x30
+       gpmc_pins: muxreg 0x0010 muxval 0x30
+       gpmc_pins: muxreg 0x0014 muxval 0x30
+       gpmc_pins: muxreg 0x0018 muxval 0x30
+       gpmc_pins: muxreg 0x001c muxval 0x30
+       gpmc_pins: muxreg 0x0020 muxval 0x30
+       gpmc_pins: muxreg 0x0024 muxval 0x30
+       gpmc_pins: muxreg 0x0028 muxval 0x30
+       gpmc_pins: muxreg 0x002c muxval 0x30
+       gpmc_pins: muxreg 0x0030 muxval 0x30
+       gpmc_pins: muxreg 0x0034 muxval 0x30
+       gpmc_pins: muxreg 0x0038 muxval 0x30
+       gpmc_pins: muxreg 0x003c muxval 0x30
+       gpmc_pins: muxreg 0x0070 muxval 0x30
+       gpmc_pins: muxreg 0x007c muxval 0x08
+       gpmc_pins: muxreg 0x0080 muxval 0x08
+       gpmc_pins: muxreg 0x0084 muxval 0x08
+       gpmc_pins: muxreg 0x0088 muxval 0x08
+       gpmc_pins: muxreg 0x0090 muxval 0x08
+       gpmc_pins: muxreg 0x0094 muxval 0x08
+       gpmc_pins: muxreg 0x0098 muxval 0x08
+       gpmc_pins: muxreg 0x009c muxval 0x08
+Processing 1 pin-config node(s) in pinctrl-0 for leds
+    user_leds_s0: muxreg 0x0054 muxval 0x07
+    user_leds_s0: muxreg 0x0058 muxval 0x17
+    user_leds_s0: muxreg 0x005c muxval 0x07
+    user_leds_s0: muxreg 0x0060 muxval 0x17
+am335x_scm0: <AM335x Control Module Extension> on ti_scm0
+simplebus2: <wkup_m3_ipc@1324> mem 0x1324-0x1347 irq 54 compat ti,am3352-wkup-m3-ipc (no driver attached)
+simplebus2: <dma-router@f90> mem 0xf90-0xfcf compat ti,am335x-edma-crossbar (no driver attached)
+simplebus0: <edma@49000000> mem 0x49000000-0x4900ffff irq 1,2,3 compat ti,edma3-tpcc (no driver attached)
+simplebus0: <tptc@49800000> mem 0x49800000-0x498fffff irq 4 compat ti,edma3-tptc (no driver attached)
+simplebus0: <tptc@49900000> mem 0x49900000-0x499fffff irq 5 compat ti,edma3-tptc (no driver attached)
+simplebus0: <tptc@49a00000> mem 0x49a00000-0x49afffff irq 6 compat ti,edma3-tptc (no driver attached)
+gpio0: <TI AM335x General Purpose I/O (GPIO)> mem 0x44e07000-0x44e07fff irq 7 on simplebus0
+gpiobus0: <OFW GPIO bus> on gpio0
+gpioc0: <GPIO controller> on gpio0
+gpio1: <TI AM335x General Purpose I/O (GPIO)> mem 0x4804c000-0x4804cfff irq 8 on simplebus0
+gpiobus1: <OFW GPIO bus> on gpio1
+gpioc1: <GPIO controller> on gpio1
+gpio2: <TI AM335x General Purpose I/O (GPIO)> mem 0x481ac000-0x481acfff irq 9 on simplebus0
+gpiobus2: <OFW GPIO bus> on gpio2
+gpioc2: <GPIO controller> on gpio2
+gpio3: <TI AM335x General Purpose I/O (GPIO)> mem 0x481ae000-0x481aefff irq 10 on simplebus0
+gpiobus3: <OFW GPIO bus> on gpio3
+gpioc3: <GPIO controller> on gpio3
+��uart0: <TI UART (16550 compatible)> mem 0x44e09000-0x44e0afff irq 11 on simplebus0
+uart0: console (115384,n,8,1)
+uart0: fast interrupt
+uart0: PPS capture mode: DCD
+simplebus0: <serial@48022000> mem 0x48022000-0x48023fff irq 12 disabled compat ti,am3352-uart (no driver attached)
+simplebus0: <serial@48024000> mem 0x48024000-0x48025fff irq 13 disabled compat ti,am3352-uart (no driver attached)
+simplebus0: <serial@481a6000> mem 0x481a6000-0x481a7fff irq 14 disabled compat ti,am3352-uart (no driver attached)
+simplebus0: <serial@481a8000> mem 0x481a8000-0x481a9fff irq 15 disabled compat ti,am3352-uart (no driver attached)
+simplebus0: <serial@481aa000> mem 0x481aa000-0x481abfff irq 16 disabled compat ti,am3352-uart (no driver attached)
+iichb0: <TI I2C Controller> mem 0x44e0b000-0x44e0bfff irq 17 on simplebus0
+iichb0: I2C revision 4.0 FIFO size: 32 bytes
+simplebus0: <i2c@4802a000> mem 0x4802a000-0x4802afff irq 18 disabled compat ti,omap4-i2c (no driver attached)
+iichb1: <TI I2C Controller> mem 0x4819c000-0x4819cfff irq 19 on simplebus0
+iichb1: I2C revision 4.0 FIFO size: 32 bytes
+sdhci_ti0: <TI MMCHS (SDHCI 2.0)> mem 0x48060000-0x48060fff irq 20 on simplebus0
+sdhci_ti0: Card presence detect on gpio0 pin 6, configured for interrupts.
+sdhci_ti0-slot0: 96MHz HS 4bits VDD: 3.0V VCCQ: 3.3V DRV: B PIO removable
+sdhci_ti0-slot0: ============== REGISTER DUMP ==============
+sdhci_ti0-slot0: Sys addr: 0x00000000 | Version:  0x00003101
+sdhci_ti0-slot0: Blk size: 0x00000000 | Blk cnt:  0x00000000
+sdhci_ti0-slot0: Argument: 0x00000000 | Trn mode: 0x00000000
+sdhci_ti0-slot0: Present:  0x01f70000 | Host ctl: 0x00000000
+sdhci_ti0-slot0: Power:    0x00000000 | Blk gap:  0x00000000
+sdhci_ti0-slot0: Wake-up:  0x00000000 | Clock:    0x00000000
+sdhci_ti0-slot0: Timeout:  0x00000000 | Int stat: 0x00000000
+sdhci_ti0-slot0: Int enab: 0x00000000 | Sig enab: 0x00000000
+sdhci_ti0-slot0: AC12 err: 0x00000000 | Host ctl2:0x00000000
+sdhci_ti0-slot0: Caps:     0x06e10080 | Caps2:    0x00000000
+sdhci_ti0-slot0: Max curr: 0x00000000 | ADMA err: 0x00000000
+sdhci_ti0-slot0: ADMA addr:0x00000000 | Slot int: 0x00000000
+sdhci_ti0-slot0: ===========================================
+sdhci_ti0-slot0: Card inserted
+mmc0: <MMC/SD bus> on sdhci_ti0
+simplebus0: <mmc@481d8000> mem 0x481d8000-0x481d8fff irq 21 disabled compat ti,omap4-hsmmc (no driver attached)
+simplebus0: <mmc@47810000> mem 0x47810000-0x47810fff irq 22 disabled compat ti,omap4-hsmmc (no driver attached)
+simplebus0: <spinlock@480ca000> mem 0x480ca000-0x480cafff compat ti,omap4-hwspinlock (no driver attached)
+ti_wdt0: <TI Watchdog Timer> mem 0x44e35000-0x44e35fff irq 23 on simplebus0
+ti_wdt0: revision: 0x502a0501
+simplebus0: <can@481cc000> mem 0x481cc000-0x481cdfff irq 24 disabled compat ti,am3352-d_can (no driver attached)
+simplebus0: <can@481d0000> mem 0x481d0000-0x481d1fff irq 25 disabled compat ti,am3352-d_can (no driver attached)
+ti_mbox0: <TI System Mailbox> mem 0x480c8000-0x480c81ff irq 26 on simplebus0
+ti_mbox0: revision 4.0
+simplebus0: <timer@44e31000> mem 0x44e31000-0x44e313ff irq 27 compat ti,am335x-timer-1ms (no driver attached)
+am335x_dmtimer0: <AM335x DMTimer2> mem 0x48040000-0x480403ff irq 28 on simplebus0
+Event timer "DMTimer2" frequency 24000000 Hz quality 500
+am335x_dmtimer1: <AM335x DMTimer3> mem 0x48042000-0x480423ff irq 29 on simplebus0
+Timecounter "DMTimer3" frequency 24000000 Hz quality 500
+simplebus0: <timer@48044000> mem 0x48044000-0x480443ff irq 30 compat ti,am335x-timer (no driver attached)
+simplebus0: <timer@48046000> mem 0x48046000-0x480463ff irq 31 compat ti,am335x-timer (no driver attached)
+simplebus0: <timer@48048000> mem 0x48048000-0x480483ff irq 32 compat ti,am335x-timer (no driver attached)
+simplebus0: <timer@4804a000> mem 0x4804a000-0x4804a3ff irq 33 compat ti,am335x-timer (no driver attached)
+am335x_rtc0: <AM335x RTC (power management mode)> mem 0x44e3e000-0x44e3efff irq 34,35 on simplebus0
+am335x_rtc0: AM335X RTC v1.0.6
+simplebus0: <spi@48030000> mem 0x48030000-0x480303ff irq 36 disabled compat ti,omap4-mcspi (no driver attached)
+spi0: <TI McSPI controller> mem 0x481a0000-0x481a03ff irq 37 on simplebus0
+spi0: scheme: 0x1 func: 0x30 rtl: 1 rev: 2.11 custom rev: 0
+spi0: SYSCONFIG: 0x15
+spi0: SYSSTATUS: 0x1
+spi0: IRQSTATUS: 0x0
+spi0: IRQENABLE: 0x0
+spi0: MODULCTRL: 0x1<SINGLE>
+spi0: CH0CONF: 0x200103c0<EPOL,DPE0,CLKG>
+spi0: wordlen: 8  clock: 500000
+spi0: CH0STAT: 0x0
+spi0: CH0CTRL: 0x600
+spi0: CH1CONF: 0x200103c0<EPOL,DPE0,CLKG>
+spi0: wordlen: 8  clock: 500000
+spi0: CH1STAT: 0x0
+spi0: CH1CTRL: 0x600
+spi0: XFERLEVEL: 0
+spibus0: <OFW SPI bus> on spi0
+spigen0: <SPI Generic IO> at cs 0 mode 3 on spibus0
+usbss0: <TI AM33xx integrated USB OTG controller> mem 0x47400000-0x47400fff on simplebus0
+usbss0: TI AM335X USBSS v0.0.13
+usbss0: <control@44e10620> mem 0x44e10620-0x44e1062f,0x44e10648-0x44e1064b compat ti,am335x-usb-ctrl-module (no driver attached)
+usbss0: <usb-phy@47401300> mem 0x47401300-0x474013ff compat ti,am335x-usb-phy (no driver attached)
+musbotg0: <TI AM33xx integrated USB OTG controller> mem 0x47401400-0x474017ff,0x47401000-0x474011ff irq 56 on usbss0
+usbus0: Dynamic FIFO sizing detected, assuming 16Kbytes of FIFO RAM
+usbus0 on musbotg0
+musbotg0: usbpf: Attached
+usbss0: <usb-phy@47401b00> mem 0x47401b00-0x47401bff compat ti,am335x-usb-phy (no driver attached)
+musbotg1: <TI AM33xx integrated USB OTG controller> mem 0x47401c00-0x47401fff,0x47401800-0x474019ff irq 57 on usbss0
+usbus1: Dynamic FIFO sizing detected, assuming 16Kbytes of FIFO RAM
+usbus1 on musbotg1
+musbotg1: usbpf: Attached
+usbss0: <dma-controller@47402000> mem 0x47400000-0x47400fff,0x47402000-0x47402fff,0x47403000-0x47403fff,0x47404000-0x47407fff irq 58 compat ti,am3359-cppi41)
+simplebus0: <epwmss@48300000> mem 0x48300000-0x4830000f disabled compat ti,am33xx-pwmss (no driver attached)
+simplebus0: <epwmss@48302000> mem 0x48302000-0x4830200f disabled compat ti,am33xx-pwmss (no driver attached)
+simplebus0: <epwmss@48304000> mem 0x48304000-0x4830400f disabled compat ti,am33xx-pwmss (no driver attached)
+cpswss0: <3-port Switch Ethernet Subsystem> mem 0x4a100000-0x4a1007ff,0x4a101200-0x4a1012ff irq 38,39,40,41 on simplebus0
+cpswss0: CPSW SS Version 1.12 (0)
+cpswss0: Initial queue size TX=128 RX=384
+cpsw0: <Ethernet Switch Port> on cpswss0
+miibus0: <MII bus> on cpsw0
+smscphy0: <SMC LAN8710A 10/100 interface> PHY 0 on miibus0
+smscphy0: OUI 0x00800f, model 0x000f, rev. 1
+smscphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto
+cpsw0: bpf attached
+cpsw0: Ethernet address: c8:a0:30:c0:5a:a3
+simplebus0: <ocmcram@40300000> mem 0x40300000-0x4030ffff compat mmio-sram (no driver attached)
+simplebus0: <elm@48080000> mem 0x48080000-0x48081fff irq 42 disabled compat ti,am3352-elm (no driver attached)
+fb0: <AM335x LCD controller> mem 0x4830e000-0x4830efff irq 43 on simplebus0
+ti_adc0: <TI ADC controller> mem 0x44e0d000-0x44e0dfff irq 44 disabled on simplebus0
+ti_adc0: scheme: 0x1 func: 0x730 rtl: 0 rev: 0.1 custom rev: 0
+simplebus0: <emif@4c000000> mem 0x4c000000-0x4cffffff irq 45 compat ti,emif-am3352 (no driver attached)
+ti_gpmc0: <TI GPMC> mem 0x50000000-0x50001fff irq 46 on simplebus0
+ti_gpmc0: +++ ti_gpmc_hw_atach
+ti_gpmc0: +++ ti_gpmc_hw_init
+ti_gpmc0: Error: failed to enable GPIO clock
+simplebus0: <sham@53100000> mem 0x53100000-0x531001ff irq 47 compat ti,omap4-sham (no driver attached)
+simplebus0: <aes@53500000> mem 0x53500000-0x5350009f irq 48 compat ti,omap4-aes (no driver attached)
+simplebus0: <mcasp@48038000> mem 0x48038000-0x48039fff,0x46000000-0x463fffff irq 49,50 disabled compat ti,am33xx-mcasp-audio (no driver attached)
+simplebus0: <mcasp@4803c000> mem 0x4803c000-0x4803dfff,0x46400000-0x467fffff irq 51,52 disabled compat ti,am33xx-mcasp-audio (no driver attached)
+simplebus0: <rng@48310000> mem 0x48310000-0x48311fff irq 53 compat ti,omap4-rng (no driver attached)
+gpioled0: <GPIO LEDs> on ofwbus0
+ofwbus0: <fixedregulator0> compat regulator-fixed (no driver attached)
+cryptosoft0: <software crypto>
+crypto: assign cryptosoft0 driver id 0, flags 0x6000000
+crypto: cryptosoft0 registers alg 1 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 2 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 3 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 4 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 5 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 16 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 6 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 7 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 32 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 18 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 19 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 20 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 8 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 15 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 9 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 10 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 13 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 14 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 34 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 35 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 36 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 37 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 11 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 22 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 23 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 25 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 24 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 26 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 27 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 28 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 21 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 17 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 29 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 30 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 31 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 39 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 41 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 42 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 43 flags 0 maxoplen 0
+crypto: cryptosoft0 registers alg 38 flags 0 maxoplen 0
+procfs registered
+Timecounters tick every 1.000 msec
+lo0: bpf attached
+tcp_init: net.inet.tcp.tcbhashsize auto tuned to 4096
+IPsec: Initialized Security Association Processing.
+iicbus0: <OFW I2C bus> on iichb0
+iic0: <I2C generic I/O> on iicbus0
+am335x_pmic0: <TI TPS65217 Power Management IC> at addr 0x48 irq 59 on iicbus0
+tda0 at addr 0xe0 on iicbus0
+iicbus0: <unknown card> at addr 0xa0
+iicbus1: <OFW I2C bus> on iichb1
+iic1: <I2C generic I/O> on iicbus1
+iicbus1: <unknown card> at addr 0xa8
+iicbus1: <unknown card> at addr 0xaa
+iicbus1: <unknown card> at addr 0xac
+iicbus1: <unknown card> at addr 0xae
+sdhci_ti0-slot0: Divider 128 for freq 375000 (base 96000000)
+mmc0: Probing bus
+usbus0: 480Mbps High Speed USB v2.0
+usbus1: 480Mbps High Speed USB v2.0
+mmc0: SD 2.0 interface conditions: OK
+mmc0: SD probe: OK (OCR: 0x40ff8000)
+ugen1.1: <Mentor Graphics OTG Root HUB> at usbus1
+uhub0: <Mentor Graphics OTG Root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ugen0.1: <Mentor Graphics OTG Root HUB> at usbus0
+uhub1: <Mentor Graphics OTG Root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+mmc0: Current OCR: 0x00ff8000
+mmc0: Probing cards
+mmc0: New card detected (CID 035344534c30384780a1eb42eb011543)
+mmc0: New card detected (CSD 400e00325b5900003b377f800a4040af)
+mmc0: Card at relative address 0xaaaa added:
+mmc0:  card: SDHC SL08G 8.0 SN A1EB42EB MFG 05/2017 by 3 SD
+mmc0:  quirks: 0
+mmc0:  bus: 4bit, 50MHz (high speed timing)
+mmc0:  memory: 15523840 blocks, erase sector 8192 blocks
+mmc0: setting transfer rate to 50.000MHz (high speed timing)
+sdhci_ti0-slot0: Divider 1 for freq 48000000 (base 96000000)
+mmcsd0: 8GB <SDHC SL08G 8.0 SN A1EB42EB MFG 05/2017 by 3 SD> at mmc0 48.0MHz/4bit/65535-block
+am335x_pmic0: TPS65217C ver 1.2 powered by AC
+GEOM: new disk mmcsd0
+am335x_pmic0:  BAT TEMP/NTC ERROR: true
+am335x_pmic0:  Pre-charge timer time-out: false
+am335x_pmic0:  Charge timer time-out: false
+am335x_pmic0:  Charger active: false
+am335x_pmic0:  Termination current detected: false
+am335x_pmic0:  Thermal suspend: false
+am335x_pmic0:  DPPM active: false
+am335x_pmic0:  Thermal regulation: inactive
+am335x_pmic0:  Charger: enabled
+am335x_pmic0:  Suspend charge: inactive
+am335x_pmic0:  Charge termination: enabled
+am335x_pmic0:  Charger reset: inactive
+am335x_pmic0:  NTC TYPE: 10k
+am335x_pmic0:  Safety timer: enabled
+am335x_pmic0:  Charge safety timer: 6h
+am335x_pmic0:  Charge voltage: 4.10V
+am335x_pmic0:  Pre-charge to fast charge transition voltage: 2.9V
+am335x_pmic0:  Dynamic timer function: enabled
+am335x_pmic0:  Temperature range for charging: 0-45 C
+am335x_pmic0:  Termination current factor: 7.5%
+am335x_pmic0:  Pre-charge time: 30 min
+am335x_pmic0:  Power path DPPM threshold: 4.25V
+am335x_pmic0:  Charge current: 500mA
+mmc0: setting bus width to 4 bits high speed timing
+tda0: TDA19988
+GEOM_PART: partition 1 on (mmcsd0, MBR) is not aligned on 4194304 bytes
+GEOM_PART: partition 2 on (mmcsd0, MBR) is not aligned on 4194304 bytes
+GEOM_PART: partition 3 on (mmcsd0, MBR) is not aligned on 4194304 bytes
+GEOM_PART: partition 1 on (mmcsd0s3, BSD) is not aligned on 4194304 bytes
+uhub0: 1 port with 1 removable, self powered
+uhub1: 1 port with 1 removable, self powered
+tda0: failed to read EDID
+WARNING: WITNESS option enabled, expect reduced performance.

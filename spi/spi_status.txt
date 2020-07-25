@@ -1,0 +1,20 @@
+
+
+spi0: <TI McSPI controller> mem 0x481a0000-0x481a03ff irq 37 on simplebus0
+spi0: scheme: 0x1 func: 0x30 rtl: 1 rev: 2.11 custom rev: 0
+spi0: SYSCONFIG: 0x15
+spi0: SYSSTATUS: 0x1
+spi0: IRQSTATUS: 0x0
+spi0: IRQENABLE: 0x0
+spi0: MODULCTRL: 0x1<SINGLE>
+spi0: CH0CONF: 0x200103c0<EPOL,DPE0,CLKG>
+spi0: wordlen: 8  clock: 500000
+spi0: CH0STAT: 0x0
+spi0: CH0CTRL: 0x600
+spi0: CH1CONF: 0x200103c0<EPOL,DPE0,CLKG>
+spi0: wordlen: 8  clock: 500000
+spi0: CH1STAT: 0x0
+spi0: CH1CTRL: 0x600
+spi0: XFERLEVEL: 0
+
+
